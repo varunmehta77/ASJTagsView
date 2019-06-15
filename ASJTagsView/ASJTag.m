@@ -30,6 +30,8 @@
 @property (readonly, nonatomic) UIImage *defaultCrossImage;
 @property (readonly, weak, nonatomic) NSBundle *tagsBundle;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *deleteButtonHeightConstraint;
+
 - (IBAction)tagTapped:(UIButton *)sender;
 - (IBAction)deleteTapped:(UIButton *)sender;
 
@@ -39,14 +41,7 @@
 
 - (void)awakeFromNib
 {
-//   self.crossImage = self.defaultCrossImage;
-}
-
-- (UIImage *)defaultCrossImage
-{
-  NSString *resourcesBundlePath = [self.tagsBundle pathForResource:@"Resources" ofType:@"bundle"];
-  NSBundle *resourcesBundle = [NSBundle bundleWithPath:resourcesBundlePath];
-  return [UIImage imageNamed:@"cross" inBundle:resourcesBundle compatibleWithTraitCollection:nil];
+   self.crossImage = self.defaultCrossImage;
 }
 
 - (NSBundle *)tagsBundle
@@ -96,11 +91,15 @@
 
 - (void)setCrossImage:(UIImage *)crossImage
 {
-  if (!crossImage) {
-    return;
-  }
-  _crossImage = crossImage;
-  [_deleteButton setImage:crossImage forState:UIControlStateNormal];
+    if (!crossImage) {
+        _deleteButtonHeightConstraint.constant = 0;
+      
+        return;
+    }
+    
+    _deleteButtonHeightConstraint.constant = 40;
+    _crossImage = crossImage;
+    [_deleteButton setImage:crossImage forState:UIControlStateNormal];
 }
 
 - (void)setTagFont:(UIFont *)tagFont
