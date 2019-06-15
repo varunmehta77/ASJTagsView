@@ -26,7 +26,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfm-QH-zbm">
-                    <rect key="frame" x="8" y="0.0" width="57" height="40"/>
+                    <rect key="frame" x="8" y="0.0" width="49" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="Tag">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +45,7 @@
                 <constraint firstAttribute="bottom" secondItem="cfm-QH-zbm" secondAttribute="bottom" id="aXf-fT-9km"/>
                 <constraint firstAttribute="trailing" secondItem="pAg-JO-aHz" secondAttribute="trailing" id="ehn-lo-bXF"/>
                 <constraint firstItem="cfm-QH-zbm" firstAttribute="top" secondItem="GU3-78-Bdh" secondAttribute="top" id="hZH-ES-khF"/>
-                <constraint firstItem="pAg-JO-aHz" firstAttribute="leading" secondItem="cfm-QH-zbm" secondAttribute="trailing" id="mTI-IY-UcA"/>
+                <constraint firstItem="pAg-JO-aHz" firstAttribute="leading" secondItem="cfm-QH-zbm" secondAttribute="trailing" constant="8" id="mTI-IY-UcA"/>
                 <constraint firstItem="pAg-JO-aHz" firstAttribute="centerY" secondItem="GU3-78-Bdh" secondAttribute="centerY" id="xko-kr-TMD"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
