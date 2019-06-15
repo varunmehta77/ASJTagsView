@@ -39,7 +39,7 @@
 
 - (void)awakeFromNib
 {
-  self.crossImage = self.defaultCrossImage;
+//   self.crossImage = self.defaultCrossImage;
 }
 
 - (UIImage *)defaultCrossImage
